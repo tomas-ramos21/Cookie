@@ -15,7 +15,6 @@ OUT=$(wildcard $(BIN_DIR)/*)
 
 #Target - Actual Program
 all: $(EXE)
-	@mv $(EXE) $(BIN_DIR)/
 	@echo [LD] Executable is ready!
 	@echo
 
