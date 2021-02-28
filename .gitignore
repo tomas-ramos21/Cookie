@@ -1,0 +1,9 @@
+.DS_Store
+Makefile
+makefile
+configure
+config.status
+config.log
+autom4te.cache
+configure.ac
+aclocal.m4
