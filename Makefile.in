@@ -1,12 +1,12 @@
 # Set variables
-EXE=cookie
+EXE=donut
 INC_DIR=inc
 SRC_DIR=src
 OBJ_DIR=obj
 BIN_DIR=bin
 USR_DIR=/usr/local/bin/
-CFLAGS = -O3 -Wall -g -Iinc -std=c99 -pedantic -D_POSIX_C_SOURCE=200112L
 CC=@CC@
+CFLAGS = -O3 -Wall -g -std=c99 -pedantic -Iinc
 
 # List source files
 SRC=$(wildcard $(SRC_DIR)/*.c) $(wildcard $(SRC_DIR)/*/*.c)
@@ -15,14 +15,14 @@ OUT=$(wildcard $(BIN_DIR)/*)
 
 #Target - Actual Program
 all: $(EXE)
-	@echo [LD] Executable is ready!
+	@mv $(EXE) $(BIN_DIR)/
+	@echo [CC] Executable compiled
 	@echo
 
 $(EXE): $(OBJ)
-	@echo [CC] Compiled all objects
-	@echo [LD] Linking object files
 	@$(CC) $^ -o $@
-	@echo [LD] Linked all object files
+	@echo [CC] Compiled all objects
+	@echo [CC] Linking object files
 
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c prep
@@ -35,14 +35,13 @@ prep:
 	@if [ -d $(BIN_DIR) ]; then continue; else mkdir $(BIN_DIR); fi
 
 install:
-	@echo [Cookie] Installing Program into /usr/bin/local
+	@echo [Data-Pass] Installing Program into /usr/bin/local
 	@sudo mv $(BIN_DIR)/$(EXE) $(USR_DIR)
-	@echo [Cookie] Installation Completed
-	@echo [Cookie] Use -h or --help for argument options
+	@echo [Data-Pass] Installation Completed
 
 # Clean Action
 clean:
 	@rm -r $(OBJ_DIR)
 	@rm -r $(BIN_DIR)
-	@echo [Cookie] Cleaned previous compilation
+	@echo [CC] Cleaned previous compilation
 	@echo
