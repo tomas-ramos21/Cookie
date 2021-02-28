@@ -2,7 +2,7 @@
   
 # Cookie Core Utilities
 
-![Latest commit](https://img.shields.io/github/last-commit/tomas-ramos21/Cookie/main?style=flat)
+![Latest commit](https://img.shields.io/github/last-commit/tomas-ramos21/Cookie/develop?style=flat)
 ![License](https://img.shields.io/github/license/tomas-ramos21/Cookie?color=purple)
 ![Version](https://img.shields.io/github/manifest-json/v/tomas-ramos21/Cookie?color=purple)
 
