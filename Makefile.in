@@ -1,5 +1,5 @@
 # Set variables
-EXE=donut
+EXE=cookie
 INC_DIR=inc
 SRC_DIR=src
 OBJ_DIR=obj
@@ -35,9 +35,9 @@ prep:
 	@if [ -d $(BIN_DIR) ]; then continue; else mkdir $(BIN_DIR); fi
 
 install:
-	@echo [Data-Pass] Installing Program into /usr/bin/local
+	@echo [Cookie] Installing Program into /usr/bin/local
 	@sudo mv $(BIN_DIR)/$(EXE) $(USR_DIR)
-	@echo [Data-Pass] Installation Completed
+	@echo [Cookie] Installation Completed
 
 # Clean Action
 clean:
