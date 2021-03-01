@@ -1,6 +1,6 @@
 <div align="center">
   
-# Cookie Cluster Computing
+# Cookie
 
 ![Latest commit](https://img.shields.io/github/last-commit/tomas-ramos21/Cookie/develop?style=flat&color=beige)
 ![License](https://img.shields.io/github/license/tomas-ramos21/Cookie?color=beige)
